@@ -16,44 +16,54 @@ class Mobile extends StatefulWidget {
 class _WebScreenState extends State<Mobile> {
   final PageController _pageController = PageController();
   @override
+  void dispose() {
+    _pageController.dispose();
+    super.dispose();
+  }
+
+  int x = 0;
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(title: const Text('mobile screen')),
         bottomNavigationBar: CupertinoTabBar(
-            onTap: (index) {
+            onTap: (index) {setState(() {
+              
+            });
               _pageController.jumpToPage(index);
+              x = index;
             },
             backgroundColor: mobileBackgroundColor,
-            items: const [
+            items: [
               BottomNavigationBarItem(
                   label: "",
                   icon: Icon(
                     Icons.home,
-                    color: primaryColor,
+                    color: x == 0 ? primaryColor : secondaryColor,
                   )),
               BottomNavigationBarItem(
                   label: "",
                   icon: Icon(
                     Icons.search,
-                    color: secondaryColor,
+                    color: x == 1 ? primaryColor : secondaryColor,
                   )),
               BottomNavigationBarItem(
                   label: "",
                   icon: Icon(
                     Icons.add_circle,
-                    color: secondaryColor,
+                    color: x == 2 ? primaryColor : secondaryColor,
                   )),
               BottomNavigationBarItem(
                   label: "",
                   icon: Icon(
                     Icons.favorite,
-                    color: secondaryColor,
+                    color: x == 3 ? primaryColor : secondaryColor,
                   )),
               BottomNavigationBarItem(
                   label: "",
                   icon: Icon(
                     Icons.person,
-                    color: secondaryColor,
+                    color: x == 4 ? primaryColor : secondaryColor,
                   )),
             ]),
         body: PageView(
@@ -61,10 +71,13 @@ class _WebScreenState extends State<Mobile> {
           // onPageChanged: (index) {},
           physics: const NeverScrollableScrollPhysics(),
           controller: _pageController,
-          children: const [HomePage(), Search(), AddPost(), 
-          Center(child:Text('I love you'))
-          ,
-          Profile()],
+          children: const [
+            HomePage(),
+            Search(),
+            AddPost(),
+            Center(child: Text('I love you')),
+            Profile()
+          ],
         ));
   }
 }
