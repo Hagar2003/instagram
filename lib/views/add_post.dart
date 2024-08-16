@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class AddPost extends StatelessWidget {
+  // ignore: non_constant_identifier_names
+  const AddPost({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -10,7 +11,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
           title
-              : const Text('screen')),
+              : const Text('Add post')),
     );
   }
 }

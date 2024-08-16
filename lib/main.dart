@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:instagaram/views/home_page.dart';
+import 'package:instagaram/responsive/responsive.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -10,8 +11,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: HomePage(),
+    return MaterialApp(debugShowCheckedModeBanner: false,
+    theme: ThemeData.dark(),
+      home:const  ResponsiveDesign()//mob: Mobile(),web: WebScreen(),),
     );
   }
 }
