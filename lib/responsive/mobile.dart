@@ -25,7 +25,7 @@ class _WebScreenState extends State<Mobile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: const Text('mobile screen')),
+        //appBar: AppBar(title: const Text('mobile screen')),
         bottomNavigationBar: CupertinoTabBar(
             onTap: (index) {setState(() {
               
