@@ -8,8 +8,9 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final double widthScreen = MediaQuery.of(context).size.width;
     return Scaffold(backgroundColor: Colors.black,
-        appBar: AppBar(
+        appBar:widthScreen<600? AppBar(
           backgroundColor: mobileBackgroundColor,
           title: const Text(
             'Instagram',
@@ -27,7 +28,7 @@ class HomePage extends StatelessWidget {
                   Icons.logout,
                 )),
           ],
-        ),
+        ):AppBar(),
         // ignore: prefer_const_constructors
         body: HomeBody());
   }
