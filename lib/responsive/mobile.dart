@@ -75,7 +75,7 @@ class _WebScreenState extends State<Mobile> {
             HomePage(),
             Search(),
             AddPost(),
-            Center(child: Text('I love you')),
+            Center(child: Text('I love you♥')),
             Profile()
           ],
         ));

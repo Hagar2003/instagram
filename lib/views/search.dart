@@ -11,7 +11,7 @@ class Search extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
           title
-              : const Text('search')),
+              : TextFormField(decoration: InputDecoration(labelText: 'Search for a user...'),)),
     );
   }
 }

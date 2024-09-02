@@ -12,6 +12,8 @@ class AddPost extends StatelessWidget {
       appBar: AppBar(
           title
               : const Text('Add post')),
+              body:Center(child:
+               IconButton(onPressed: (){}, icon: Icon(Icons.upload,size: 60,)))
     );
   }
 }

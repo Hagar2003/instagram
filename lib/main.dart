@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:instagaram/responsive/responsive.dart';
+import 'package:instagaram/views/sign_in.dart';
+//import 'package:instagaram/responsive/responsive.dart';
 
 
 void main() {
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(debugShowCheckedModeBanner: false,
     theme: ThemeData.dark(),
-      home:const  ResponsiveDesign()//mob: Mobile(),web: WebScreen(),),
+     home:const Login()//Reg ResponsiveDesign()//mob: Mobile(),web: WebScreen(),),
     );
   }
 }

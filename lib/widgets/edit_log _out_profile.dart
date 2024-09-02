@@ -6,9 +6,10 @@ class EditLog extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+      final double widthScreen = MediaQuery.of(context).size.width;
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 4.0, horizontal: 15),
-      child: Row(
+      child: Row(mainAxisAlignment: MainAxisAlignment.center,
         children: [
           ElevatedButton.icon(
             onPressed: () {},
@@ -24,7 +25,8 @@ class EditLog extends StatelessWidget {
             style: ButtonStyle(
               backgroundColor: WidgetStateProperty.all(mobileBackgroundColor),
               padding: WidgetStateProperty.all(
-                  EdgeInsets.symmetric(vertical: 10, horizontal: 25)),
+                  EdgeInsets.symmetric(vertical:widthScreen>600? 18: 14, 
+                  horizontal:23)),
               shape: WidgetStateProperty.all(RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(12),
                   side: BorderSide(
@@ -47,7 +49,8 @@ class EditLog extends StatelessWidget {
               backgroundColor: WidgetStateProperty.all(
                   const Color.fromARGB(143, 255, 55, 112)),
               padding: WidgetStateProperty.all(
-                  EdgeInsets.symmetric(vertical: 10, horizontal: 25)),
+                  EdgeInsets.symmetric(vertical: widthScreen>600? 18: 14,
+                   horizontal: 23)),
               shape: WidgetStateProperty.all(RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(12),
                   side: BorderSide(

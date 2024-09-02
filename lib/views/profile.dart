@@ -7,6 +7,7 @@ class Profile extends StatelessWidget {
   const Profile({super.key});
   @override
   Widget build(BuildContext context) {
+    final double widthScreen = MediaQuery.of(context).size.width;
     return Scaffold(
         backgroundColor: mobileBackgroundColor,
         appBar: AppBar(
@@ -83,7 +84,7 @@ class Profile extends StatelessWidget {
           ),
           Divider(
             color: primaryColor,
-            thickness: .34,
+            thickness:widthScreen>600? 0.06 : .34,
           ),
           SizedBox(
             height: 15,
